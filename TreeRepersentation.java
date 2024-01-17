@@ -33,15 +33,15 @@ public class TreeRepersentation {
       
         //Postorder traversal
 
-          traverse(root.left);
-          traverse(root.right);
-      System.out.print(root.data+" "); 
+      //     traverse(root.left);
+      //     traverse(root.right);
+      // System.out.print(root.data+" "); 
 
 
      //Preorder traversal
-    //  System.out.print(root.data+" "); 
-    //     traverse(root.left);
-    //   traverse(root.right);
+     System.out.print(root.data+" "); 
+        traverse(root.left);
+      traverse(root.right);
 
 
       // Inorder Traversal...
