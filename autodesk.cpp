@@ -1,20 +1,38 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void printAuto(int n){
+void reverseArray(int i,vector<int>& arr){
+   
+  if(i==arr.size()/2) return;
+
   
-  if(n==0) return;
+    swap(arr[i],arr[arr.size()-i-1]);
+    i++;
+    reverseArray(i,arr);
+
   
-  cout<<n<<" ";
-   printAuto(n-1);
   
 
 }
 int main(){
  
-   int n = 5;
- 
+
+ int n;
+ cin>>n;
+
+ vector<int> arr(n);
+
+ for(int i=0; i<n; i++){
+   cin>>arr[i];
+ }
+
+ reverseArray(0,arr);
+
+for(int i=0; i<n; i++){
+   cout<<arr[i]<<" ";
+ }
+
     
-    printAuto(n);
+  
    
 }
