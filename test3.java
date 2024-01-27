@@ -6,51 +6,19 @@ public class test3 {
     public static void main(String[] args) {
         
 
+  HashMap<Integer,Integer> mp  = new HashMap<Integer,Integer>();
 
-        int arr[] = {1,6,8,4,9,2,3,1,7,1};
-
-      ArrayList<Integer> li1 = new ArrayList<>();
-      ArrayList<Integer> li2 = new ArrayList<>();
-        int n= arr.length;
-
-        int m  = 4;
-
-        int ans[ ] = new int[n];
-
-        for(int i=0;i<arr.length;i++){
-
-            if(arr[i]<m){
-                arr[i] = 1;
-            }
-        }
-
-
-        for(int i=0;i<n;i++){
-            if(arr[i]==1){
-               li1.add(arr[i]);
-            }
-        }
-
-        for(int i =0;i<n;i++){
-            if(arr[i]!=1 ){
-                li2.add(arr[i]);
-            }
-        }
+   mp.put(1,3);
+   mp.put(2,2);
+ 
    
-        ArrayList<Integer> li3 = new ArrayList<Integer>();
+   for(Map.Entry<Integer,Integer> e:mp.entrySet()){
+       int key =e.getKey();
+       int value =e.getValue();
 
-        for(int x:li1){
+       System.out.println(key+"->" +value);
 
-            li3.add(x);
-
-        }
-
-        for(int x:li2){
-            li3.add(x);
-        }
-
-       for(int x:li3){
-        System.out.print(x+"");
-       }
+   }
+     
     }    
 }

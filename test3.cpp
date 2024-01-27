@@ -1,41 +1,36 @@
 #include<bits/stdc++.h>
 using namespace std;
+int printKSubs(int i,int k,int arr[],int sum,int n){
 
-void printSubsequence(int i,vector<int>& ans,int arr[],int& n){
- 
+    if(i==n){
+        if(k==sum ){
+          return 1;
+        }
+        return 0;
+    }
+
   
-  if(i==n){
-    for(auto& a : ans){
-      cout<<a<<" ";
-    }
-    if(ans.size()==0){
-      cout<<"{}";
-    }
-    cout<<endl;
-
-    return;
-  }
-
-  ans.push_back(arr[i]);
-
-  printSubsequence(i+1,ans,arr,n);
-  ans.pop_back();
-  printSubsequence(i+1,ans,arr,n);
-
-
+    sum+=arr[i];
+   
+   int l= printKSubs(i+1,k,arr,sum,n);
+    sum-=arr[i];
+   
+ 
+int r =printKSubs(i+1,k,arr,sum,n);
+     
+ return l+r;
+     
 
 }
 int main(){
  
- 
- int arr[] ={3,1,2};
- int n = 3;
- vector<int> ans;
-printSubsequence(0,ans,arr,n);
+    
+    int arr[] = {1,2,1,1};
+    int k =2;
+    int n =3;
+  
 
-
-
-
-
+   
+    cout<<printKSubs(0,k,arr,0,n);
 
 }
