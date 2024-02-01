@@ -25,7 +25,7 @@ int r =printKSubs(i+1,k,arr,sum,n);
 int main(){
  
     
-    int arr[] = {1,2,1,1};
+    int arr[] = {1,1,1};
     int k =2;
     int n =3;
   
