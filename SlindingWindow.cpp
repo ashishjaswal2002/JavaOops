@@ -9,7 +9,7 @@ int maxSubArray(vector<int>& nums,int& k){
     int i=0;//startOfWindow
     int j=0;//endOfWindow
     while (j<nums.size())
-    {
+    { 
         sum+=nums[j];
         if(j-i+1<k){
             j++;
