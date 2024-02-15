@@ -1,0 +1,1 @@
+{"name":"Local: Borze","url":"/Users/abc/Desktop/JavaOops/Borze.cpp","tests":[{"id":1708018571864,"input":".-.--","output":"012"},{"id":1708018847973,"input":"--.","output":"20"},{"id":1708019019906,"input":"-..-.--\n","output":"1012"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/abc/Desktop/JavaOops/Borze.cpp","group":"local","local":true}
