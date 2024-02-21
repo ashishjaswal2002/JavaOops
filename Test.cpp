@@ -2,9 +2,14 @@
 #define TestCase int t; cin>>t; while(t--)
 using namespace std;
 int main(){
+   
  
-   int n;
-   cin>>n;
+  int a = 5&6;
+  int b = a&7;
 
+  cout<<b<<" ";
+
+
+   
 
 }
