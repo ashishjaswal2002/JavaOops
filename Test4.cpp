@@ -1,18 +1,37 @@
 #include<bits/stdc++.h>
-using namespace std;
 #define TestCase int t; cin>>t; while(t--)
-#define N int n;cin>n;
+using namespace std;
+int longestLength (vector<string>&s){
+     
+
+     set<char> charset;
+     int longestLength =0;
+
+     for(int i=0;i<s.size();i++){
+         bool flag  =  false;
+         string single = s[i];
+         for(auto x:single){
+
+          if(charset.find(x)!=charset.end()){
+            flag = true;
+         } charset.insert(x);
+         
+     }
+      if(flag==false){
+         longestLength+=single.size();
+      }
+      
+     }
+    
+     return longestLength;
+
+}
+
 int main(){
-  vector<int> v = {0,1,0,3,12};
-  int n = v.size();
-  vector<int> v2;
-  for(auto x:v){
-    if(x>0){
-        v2.push_back(x);
-    }
-  }
-  v2.resize(n,0);
-  for(auto x:v2){
-    cout<<x<<" ";
-  }
+ 
+ vector<string> s  ={"potato","kayak","banana","racecar"};
+   cout<<longestLength(s);
+
+
+
 }
